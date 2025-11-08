@@ -1,4 +1,8 @@
 /* Basic CSS for the navigation bar */
+.body{
+    background-image: url("./images/vacances.jpg");
+}
+
 nav{
     margin: 0;
     background-color: black;
@@ -121,18 +125,42 @@ nav a {
 }
 
 .div1{
+    color: black;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 40%;
     input{
+        background: transparent;
         height: 10px;
         width: 300px;
+
     }
     textarea{
+        background: transparent;
         height: 100px;
-        width: 300px;
+        width: 310px;
+    }
+    button{
+        padding: 7px 135px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
 }
-.body{
-    background-image: url("./images/vacances.jpg");
-}#
+.equipe{
+    color: white;
+    li{
+        display: inline-block;
+        width: 150px;
+        a{
+            padding: 5px 10px;
+            font-weight: bold;
+            color: white;
+	        background: blue;
+            border-radius: 5px;
+        }
+
+    }
+
+}
