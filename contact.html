@@ -6,17 +6,40 @@
     <link rel="stylesheet" href="./travel_recommandation.css">
     
 </head>
-<body>
-<body background='./vacances.jpg'>
-    <nav><h1>TravelBloom</h1>
-<ul>
-    <li><a href="./travel_recommendation.html">Home</a></li>
-    <li><a herf="./about.html">About Us</a></li>
-    <li><a href="./contact.html">Contact Us</a></li>
-</ul>
-<ul>
-    <li><input type="text" id="Recherche" placeholder="Entrez votre recherche"></li>
-    <li><button id="boutonRecherche">Search</button></li>
-    <li><button id="BoutonEffacer">Clear</button></li>
-</ul>
+<body class="body">
+    <!--<body class="corp" background='./images/vacances.jpg'>-->
+<nav>
+    <ul>
+        <li><h1><img scr='./images/avion.jpg'
+        width="30" height="30"/>
+        TravelBloom</h1></li>
+    </ul>
+    <ul>
+        <li><a href="./travel_recommendation.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+    <ul>
+        <li><input type="text" id="Recherche" placeholder="Entrez votre recherche"></li>
+        <li><button id="boutonRecherche">Search</button></li>
+        <li><button id="BoutonEffacer">Clear</button></li>
+    </ul>
 </nav>
+<div id=d1">
+    <p class="contact">CONTACTEZ NOUS</p>
+</div>
+
+
+<div class="div1">
+    <ul>
+        <label for="nom">Nom: </label><br>
+        <input type="text" id="nom" placeholder="Nom..."><br>
+        <label for="mail">Email: </label><br>
+        <input type="text" id="mail" placeholder="Email..."><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="Votre message..."></textarea><br>
+        <button id="envoi">Envoyer</button>
+    </ul>
+</div>
+<script src="./travel_recommendation.js"></script>
+</body>
