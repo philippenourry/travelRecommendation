@@ -1,38 +1,29 @@
 /* Basic CSS for the navigation bar */
 nav{
     margin: 0;
+    background-color: black;
+    color: white;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
+    align-items: center; 
+    justify-content: space-between; 
+    display: flex;
 }
 
-nav {
-    background-color: black;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
-  }
-  
-  nav h1{
-    color: white;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    color: white;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
+img {
+    z-index: 1;
+ }
+
+nav ul li {
     display: inline;
     margin-right: 10px;
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-  }
+}
   
   /* Basic CSS for the form elements */
   body {
@@ -87,10 +78,8 @@ nav {
 .textePub{
     color: white;
     font-size: 15px;
-    border: 2px solid red;
     padding: 15px;
     width: 20%;
-    box-sizing: border-box;
     position: relative;
     top: 120px;
     left: 100px;
