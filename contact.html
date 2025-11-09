@@ -19,18 +19,18 @@
         <li><a href="./about.html">About Us</a></li>
         <li><a href="./contact.html">Contact Us</a></li>
     </ul>
-    <ul>
+<!--    <ul>
         <li><input type="text" id="Recherche" placeholder="Entrez votre recherche"></li>
         <li><button id="boutonRecherche">Search</button></li>
         <li><button id="BoutonEffacer">Clear</button></li>
-    </ul>
+    </ul>-->
 </nav>
 <div id=d1">
     <p class="contact">CONTACTEZ NOUS</p>
 </div>
 
 
-<div class="div1">
+<form class="form1">
     <ul>
         <label for="nom">Nom: </label><br>
         <input type="text" id="nom" placeholder="Nom..."><br><br>
@@ -38,8 +38,22 @@
         <input type="text" id="mail" placeholder="Email..."><br><br>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" placeholder="Votre message..."></textarea><br>
-        <button id="boutonEnvoi">Envoyer</button>
+        <button type="submit" onclick="boutonEnvoi()">Envoyer</button>
     </ul>
-</div>
-<script src="./travel_recommendation.js"></script>
+</form>
+<script>
+    function boutonEnvoi(){
+        const nom=document.getElementById("nom").value;
+        const mail=document.getElementById("mail").value;
+        const message=document.getElementById("message").value;
+        console.log(nom);
+        if (nom && mail && message){
+            messageEnvoye="votre message a bien été envoyé à l'adresse: "+ mail
+            alert(messageEnvoye);
+            document.getElementById("nom").value="";
+            document.getElementById("mail").value="";
+            document.getElementById("message").value="";
+        }   
+    }
+</script>
 </body>

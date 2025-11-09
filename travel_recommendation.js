@@ -1,10 +1,9 @@
-const boutonEnvoi=document.getElementById("boutonEnvoi");
-const boutonRecherche=document.getElementById("boutonRecherche");
-const boutonEffacer=document.getElementById("boutonEffacer");
+const boutonRecherche = document.getElementById("boutonRecherche");
+const boutonEffacer = document.getElementById("boutonEffacer");
 
-boutonEnvoi.addEventListener('click', formulaireEnvoye);
-boutonRecherche.addEventListener('click', rechercheDestination);
-BoutonEffacer.addEventListener('click', effacerRecherche);
+
+boutonRecherche.addEventListener("click", rechercheDestination);
+boutonEffacer.addEventListener("click", effacerRecherche);
 
 function formulaireEnvoye(){
     const nom=document.getElementById("nom").value;
@@ -20,7 +19,7 @@ function formulaireEnvoye(){
 }
 
 function rechercheDestination(){
-    const Recherche=document.getElementById("recherche").value.toLowercase();
+    const recherche=document.getElementById("recherche").value.toLowerCase();
     console.log(recherche);
 }
 
