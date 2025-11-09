@@ -1,5 +1,6 @@
 const boutonRecherche = document.getElementById("boutonRecherche");
 const boutonEffacer = document.getElementById("boutonEffacer");
+const resultat=document.getElementById("result");
 const tableCle=[
     {cle: "beach", valeur: "beaches"},
     {cle: "temple", valeur: "temples"},
@@ -26,15 +27,13 @@ function rechercheDestination(){
 }
 fetch('travel_recommendation_api.json')
     .then (response => {return response.json();})
-    //.then (data => {console.log(data);})
     .then (data => {
-        const condition = data.${rechercheFinale}.find(item => item.name.toLowerCase()==="australia");
-        if(condition){
-            const pays = condition.name;
-            console.log(pays);
-                }
-    })
-
+        console.log(data);
+        const resultat=data.countries.find((element) => element.name==="Australia");
+        console.log(resultat);
+            
+        });
+    
 
 function effacerRecherche(){
     document.getElementById("recherche").value="";
