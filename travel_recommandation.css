@@ -93,26 +93,48 @@ nav a {
     font-size: 50px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 100px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    
 }
 .entreprise{
     color:white;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 100px;
     box-sizing: border-box;
     width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
 }
 .ourteam{
     color: white;
     font-size: 50px;
     font-weight:bold;
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 150px;
+    position: absolute;
+    top: 35%;
+    left: 15%;
 }
 .equipe{
+    ul{
     color: white;
-    padding-left: 200px;
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    }
+    li{
+        display: inline-block;
+        width: 150px;
+        a{
+            padding: 5px 10px;
+            font-weight: bold;
+            color: white;
+	        background: rgb(96, 96, 214);
+            border-radius: 5px;
+        }
+    }
 }
 .contact{
     color: white;
@@ -147,20 +169,4 @@ nav a {
         border: none;
         cursor: pointer;
     }
-}
-.equipe{
-    color: white;
-    li{
-        display: inline-block;
-        width: 150px;
-        a{
-            padding: 5px 10px;
-            font-weight: bold;
-            color: white;
-	        background: blue;
-            border-radius: 5px;
-        }
-
-    }
-
 }
