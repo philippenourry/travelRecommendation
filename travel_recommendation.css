@@ -15,9 +15,6 @@ nav{
 
 }
 
-img {
-    z-index: 1;
- }
 
 nav ul li {
     display: inline;
@@ -47,14 +44,7 @@ nav a {
     display: inline-block;
     width: 100px;
   }
-  
-  input[type="text"],
-  input[type="number"],
-  select {
-    width: 200px;
-    padding: 5px;
-  }
-  
+    
   button {
     padding: 7px 15px;
     background-color: #4CAF50;
@@ -147,13 +137,14 @@ nav a {
 }
 
 .form1{
+
     color: black;
     position: absolute;
     top: 35%;
     left: 40%;
     input{
         background: transparent;
-        height: 10px;
+        height: 15px;
         width: 300px;
 
     }
@@ -171,8 +162,8 @@ nav a {
     }
 }
 #affichageResultat{
-  position: absolute;
-  top: 10%;
+ position: absolute;
+ top: 15%;
   left: 60%;
   height: 400px;
   width: 500px;
@@ -182,13 +173,8 @@ nav a {
   flex-direction: column;
 }
   #affichageResultat img{
-    position: absolute;
-    top: 10%;
-    left: 60%;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+
+    width: 200px;
+    height: 100px;
+
   }
