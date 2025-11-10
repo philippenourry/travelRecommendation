@@ -29,12 +29,24 @@ fetch('travel_recommendation_api.json')
     .then (response => {return response.json();})
     .then (data => {
         const resultat=data[rechercheFinale];
-        console.log(resultat);
-        for (index=0;index<resultat.length; index++)
-        {
-            affichage.innerHTML +=`<h2>${resultat[index].name}<h2>`;
-            affichage.innerHTML +=`<img scr="${resultat[index].imageUrl}" alt="angkor">`;
-            affichage.innerHTML +=`<p>${resultat[index].description}<p>`;
+        if (rechercheFinale==="countries"){
+            for (let i = 0; i < resultat.length; i++){
+                console.log(resultat[i]);
+                for(let j = 0; j < resultat[i].length; j++){
+                    affichage.innerHTML +=`${i}`;
+                    //affichage.innerHTML +=`<h2>${resultat[j][i].name}<h2>`;
+                    //affichage.innerHTML +=`<img src="${resultat[j][i].imageUrl}" alt="angkor">`;
+                    //affichage.innerHTML +=`<p>${resultat[j][i].description}<p>`;
+                }
+            }
+        }
+        else{
+            for (index=0;index<resultat.length; index++)
+            {
+                affichage.innerHTML +=`<h2>${resultat[index].name}<h2>`;
+                affichage.innerHTML +=`<img src="${resultat[index].imageUrl}" alt="angkor">`;
+                affichage.innerHTML +=`<p>${resultat[index].description}<p>`;
+            }
         }
         });
     
