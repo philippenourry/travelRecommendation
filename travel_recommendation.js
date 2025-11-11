@@ -26,21 +26,16 @@ function rechercheDestination(){
     //const resultdiv=document.getElementById("result");
     const recherche=document.getElementById("recherche").value.toLowerCase();
     const affichage=document.getElementById("affichageResultat");
-    let indexRech="";
+    let rechercheFinale="";
     affichage.style.display="block";
     affichage.innerHTML =``;
-    //for (index=0; index<tableCle.length; index++){
-    //    if (recherche==tableCle[index].cle) {
-    //        rechercheFinale=tableCle[index].valeur;
-            //break;
-    //    }
+    let search=tableCle.find(element => element.cle===recherche)
+    if (search){
+        rechercheFinale=search.valeur}
+    //else{
+        //affichage.innerHTML +=`<p>il n'existe pas d'entrée pour  "${recherche}"</p>`;
+        //affichage.innerHTML +=`<p>veuillez renouveller votre recherche</p>`;
     //}
-    const search=tableCle.find(indexRech => indexRech.cle===recherche)
-    if (indexRech){
-        rechercheFinale=indexRech.valeur}
-    else{
-        affichage.innerHTML =`il n'existe pas d'netrre`;
-    }
 fetch('travel_recommendation_api.json')
     .then (response => {return response.json();})
     .then (data => {
@@ -67,7 +62,7 @@ fetch('travel_recommendation_api.json')
         })
     .catch(err => {
         console.error('Error:', err);
-        //affichage.innerHTML = 'une erreur est apparue lors du chargement des données.';
+        affichage.innerHTML += 'une erreur est apparue lors du chargement des données.';
     });
 }
 function effacerRecherche(){
