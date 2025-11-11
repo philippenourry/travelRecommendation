@@ -8,8 +8,11 @@ affichage.style.display="none";
 const tableCle=[
     {cle: "beach", valeur: "beaches"},
     {cle: "beache", valeur: "beaches"},
+    {cle: "beaches", valeur: "beaches"},
     {cle: "temple", valeur: "temples"},
+    {cle: "temples", valeur: "temples"},
     {cle: "countrie", valeur: "countries"},
+    {cle: "countries", valeur: "countries"},
     {cle: "countire", valeur: "countries"},
     {cle: "countires", valeur: "countries"},
 ];
@@ -23,16 +26,20 @@ function rechercheDestination(){
     //const resultdiv=document.getElementById("result");
     const recherche=document.getElementById("recherche").value.toLowerCase();
     const affichage=document.getElementById("affichageResultat");
+    let indexRech="";
     affichage.style.display="block";
     affichage.innerHTML =``;
-    for (index=0; index<tableCle.length; index++){
-        if (recherche==tableCle[index].cle) {
-            rechercheFinale=tableCle[index].valeur;
-            break;
-        }
-        else {
-            rechercheFinale=recherche;
-        }
+    //for (index=0; index<tableCle.length; index++){
+    //    if (recherche==tableCle[index].cle) {
+    //        rechercheFinale=tableCle[index].valeur;
+            //break;
+    //    }
+    //}
+    const search=tableCle.find(indexRech => indexRech.cle===recherche)
+    if (indexRech){
+        rechercheFinale=indexRech.valeur}
+    else{
+        affichage.innerHTML =`il n'existe pas d'netrre`;
     }
 fetch('travel_recommendation_api.json')
     .then (response => {return response.json();})
@@ -57,8 +64,11 @@ fetch('travel_recommendation_api.json')
                 affichage.innerHTML +=`<p><button id=${index} onclick=boutonReserver(id)>Reservation</button></p>`;
             }
         }
-        });
-    
+        })
+    .catch(err => {
+        console.error('Error:', err);
+        //affichage.innerHTML = 'une erreur est apparue lors du chargement des données.';
+    });
 }
 function effacerRecherche(){
     const affichage=document.getElementById("affichageResultat");
